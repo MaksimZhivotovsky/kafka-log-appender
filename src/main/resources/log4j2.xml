@@ -2,7 +2,8 @@
 <Configuration status="info" name="spring-boot-kafka-log" packages="com.reloadly">
     <Appenders>
         <Kafka name="Kafka" topic="my-topic-1">
-            <PatternLayout pattern="%date %message"/>
+            <JSONLayout/>
+<!--            <PatternLayout pattern="%date %message"/>-->
             <Property name="bootstrap.servers">localhost:9092</Property>
         </Kafka>
         <Async name="Async">
